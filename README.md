@@ -152,6 +152,12 @@ Libraries, schools, universities, and anyone who needs a simple book and author 
 ![Banner Partial](https://github.com/user-attachments/assets/bab6a63b-2c40-4830-97ac-11992aa0b04a)
 
 
+## About
+
+
+![About](https://github.com/user-attachments/assets/b553bdd2-5512-4477-92fd-c7c772519085)
+
+
 ## License and Copyright
 
 - **License**: This project is licensed under the [Project License] (if applicable).
