@@ -9,5 +9,10 @@ namespace Library_Management_System_MVC.Controllers
             //Book controller'ın List Action'a yönlendirme yapıldı.
             return RedirectToAction("List", "Book");
         }
+       // Shared klasöründeki About.cshtml dosyasını döndürmek için tam yol kullanma yolunu seçtim.
+        public IActionResult About()
+        {
+            return View("~/Views/Shared/_About.cshtml");
+        }
     }
 }
