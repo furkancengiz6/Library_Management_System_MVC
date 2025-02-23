@@ -1,4 +1,4 @@
-![Yazar Listesi](https://github.com/user-attachments/assets/58e40987-5cca-4146-91ad-41ce14ed4543)# Library Management System
+# Library Management System
 
 ## Project Overview
 The **Library Management System** is a simple web application designed to manage books and authors in a library setting. The application provides the ability to add, edit, delete, and list books and authors. It allows users to view details about books and authors, as well as manage their data.
