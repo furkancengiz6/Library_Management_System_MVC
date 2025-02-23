@@ -1,0 +1,27 @@
+﻿@model AuthorDetailsViewModel
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">@Model.FullName</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>Ad Soyad:</strong> @Model.FullName</p>
+            <p><strong>Doğum Tarihi:</strong> @Model.DateOfBirth.ToShortDateString()</p>
+            <p><strong>Kitaplar</strong></p>
+            <ul>
+                @foreach (var book in Model.Books)
+                {
+                    <li>@book.Title</li>
+                }
+            </ul>
+        </div>
+
+        <div class="card-footer text-end">
+            <a asp-controller="Author" asp-action="List" class="btn btn-primary">
+                <i class="bi bi-arrow-left"></i> Geri Dön
+            </a>
+        </div>
+    </div>
+</div>

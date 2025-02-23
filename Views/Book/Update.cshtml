@@ -1,0 +1,47 @@
+﻿@model BookUpdateViewModel
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-warning text-dark">
+            <h4 class="mb-0">Kitap Güncelle</h4>
+        </div>
+        <div class="card-body bg-light">
+            <form method="post">
+                @*Güncellemede Id dönüyor bu yüzden hidden ile gizlendi.*@
+                <input type="hidden" asp-for="Id" />
+
+                <div class="mb-3">
+                    <label class="form-label text-warning">Başlık</label>
+                    <input type="text" class="form-control border-secondary" asp-for="Title"  />
+                </div>
+
+                <div class="form-group">
+                    <label for="AuthorId">Yazar</label>
+                    @*1. Listem 2.Gömek istediğim veri 3.görmek istediğim asp-item SelectList newlendi constructor*@
+                    <select asp-for="AuthorId" class="form-control" asp-items="@(new SelectList(Model.Authors, "Id", "FullName"))" >
+                        <option value="">Seçiniz...</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-warning">Tür</label>
+                    <input type="text" class="form-control border-secondary" asp-for="Genre" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-warning">Mevcut Kopya Sayısı</label>
+                    <input type="number" class="form-control border-secondary" asp-for="CopiesAvailable" min="0"  />
+                </div>
+
+                <div class="text-end">
+                    <a asp-controller="Book" asp-action="List" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Geri
+                    </a>
+                    <button type="submit" class="btn btn-warning">
+                        <i class="bi bi-check-circle"></i> Kaydet
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

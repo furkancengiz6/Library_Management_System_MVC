@@ -1,0 +1,28 @@
+﻿@model BookDetailsViewModel
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+       
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">@Model.Title</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>Yazar:</strong> @Model.AuthorName</p>
+            <p><strong>Tür:</strong> @Model.Genre</p>
+            <p><strong>Yayın Tarihi:</strong> @Model.PublishDate.ToShortDateString()</p>
+            <p><strong>ISBN:</strong> @Model.ISBN</p>
+            <p><strong>Mevcut Kopya:</strong> @Model.CopiesAvailable</p>
+        </div>
+        <div class="card-footer text-end">
+        
+  
+            <a asp-controller="Book" asp-action="Update" asp-route-id="@Model.Id" class="btn btn-warning">
+                <i class="bi bi-pencil-square"></i> Güncelle
+            </a>
+          
+            <a asp-controller="Book" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger" onclick="return confirm('Bu kitabı silmek istediğinizden emin misiniz?');">
+                <i class="bi bi-trash"></i> Sil
+            </a>
+        </div>
+    </div>
+</div>

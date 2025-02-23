@@ -1,0 +1,26 @@
+﻿@model AuthorUpdateViewModel
+
+<h2 class="text-danger">Yazar Güncelleme</h2>
+
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label class="form-label text-dark">İsim</label>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label text-dark">Soyisim</label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label text-dark">Doğum Tarihi</label>
+        <input asp-for="DateOfBirth" type="date" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-danger">
+        <i class="bi bi-check-circle"></i> Kaydet
+    </button>
+</form>

@@ -1,0 +1,47 @@
+﻿@model BookCreateViewModel
+
+
+
+
+@*method=post ile veriyi taşıma yöntemimizi post seçtik.*@
+<form method="post" asp-controller="Book" asp-action="Create">
+    @*Tüm hataları üste sırala dedik summary ile*@
+    <div asp-validation-summary="All" class="text-danger">
+
+    </div>
+
+    <div class="form-group">
+        <label for="Title">Kitap Adı</label>
+        @*BookCreateViewModel deki Title'a  eşledik*@
+        <input asp-for="Title" class="form-control"  />
+        <span asp-validation-for="Title" class="text-danger" ></span>
+        @*Title'a ait hata mesajını göstermek için span kullandık.Böylelikle hem üste hatalar sıralandı hemde altlarında*@
+    </div>
+
+    <div class="form-group">
+        <label for="AuthorId">Yazar</label>
+        <select asp-for="AuthorId" class="form-control" asp-items="@(new SelectList(Model.Authors, "Id", "FullName"))" >
+            <option value="">Seçiniz...</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Genre">Tür</label>
+        <input asp-for="Genre" class="form-control"  />
+        <span asp-validation-for="Genre" class="text-danger"   ></span>
+    </div>
+
+    <div class="form-group">
+        <label for="ISBN">ISBN</label>
+        <input asp-for="ISBN" class="form-control" />
+        <span asp-validation-for="ISBN" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="CopiesAvailable">Kopya Sayısı</label>
+        <input asp-for="CopiesAvailable" class="form-control"  />
+        <span asp-validation-for="CopiesAvailable" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-warning mt-4 fw-bold float-end">Kitap Ekle</button>
+</form>
