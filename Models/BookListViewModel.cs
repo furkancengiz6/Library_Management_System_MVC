@@ -12,7 +12,7 @@ namespace Library_Management_System_MVC.Models
         public string ISBN { get; set; }
         public int CopiesAvailable { get; set; }
 
-        //Controllerda birleştirme işlemi yapmak istememden kaynaklı burda yapmak istedim, kodlar çok karmaşık hale geliyor.Göz var izan derim. :)
+        //Controllerda birleştirme işlemi yapmak istememden kaynaklı burda yapmak istedim, kodlar çok karmaşık hale geliyor.
         // Eğer Author nesnesi null değilse, ad ve soyad bilgilerini birleştirip döndür.
         // Eğer Author null ise, "Bilinmiyor" yazısını döndür.
         public string AuthorName => Author != null ? Author.FirstName + " " + Author.LastName : "Bilinmiyor";
