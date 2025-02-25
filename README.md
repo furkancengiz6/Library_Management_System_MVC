@@ -69,8 +69,7 @@ Libraries, schools, universities, and anyone who needs a simple book and author 
 - **Forms**: Forms for adding and editing authors and books.
 - **Listing Pages**: Pages that display lists of authors and books.
 - **Validations**: Both server-side and client-side validations are implemented to ensure correct data input.
-- **Responsive Design**: The application adapts to different screen sizes, including mobile devices.
-
+  
 ---
 
 ## Installation and Usage
