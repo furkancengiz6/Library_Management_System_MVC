@@ -16,7 +16,7 @@ Libraries, schools, universities, and anyone who needs a simple book and author 
 - **ASP.NET Core MVC**: For backend development.
 - **C#**: Used for business logic and server-side processing.
 - **Visual Studio 2022**: The development environment.
-- **HTML, CSS, JavaScript**: For frontend and UI design.
+- **HTML, CSS, Bootstrap**: For frontend and UI design.
 - **Model-View-Controller (MVC) Pattern**: Follows the MVC architecture for better structure and separation of concerns.
 - **OOP (Object-Oriented Programming)**: Applied to ensure clean, maintainable, and reusable code.
 - **DRY Principle**: The ViewModels are used to avoid repetition of code.
@@ -160,5 +160,4 @@ Libraries, schools, universities, and anyone who needs a simple book and author 
 
 ## License and Copyright
 
-- **License**: This project is licensed under the [Project License] (if applicable).
 - **Copyright**: All rights reserved.
